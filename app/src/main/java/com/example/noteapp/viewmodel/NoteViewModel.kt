@@ -12,8 +12,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class NoteViewModel(application: Application):AndroidViewModel(application) {
-    private val noteList: LiveData<List<Note>>
-    private val repository: NoteRepositoryInterface
+    val noteList: LiveData<List<Note>>
+    val repository: NoteRepositoryInterface
 
     init {
         val dao = NoteDatabase.makeDatabase(application).noteDao()

@@ -16,3 +16,8 @@ buildscript {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    room_version = '2.4.2'
+    coroutine_version = '1.6.1'
+}

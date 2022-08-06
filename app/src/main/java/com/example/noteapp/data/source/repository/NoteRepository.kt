@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import com.example.noteapp.data.model.Note
 import com.example.noteapp.data.source.NoteDao
 
-class NoteRepository(private val noteDao: NoteDao):NoteRepositoryInterface{
+class NoteRepository(private val noteDao: NoteDao):NoteRepositoryInterface {
 
 
     override suspend fun insertNote(note: Note) {
@@ -16,11 +16,11 @@ class NoteRepository(private val noteDao: NoteDao):NoteRepositoryInterface{
     }
 
     override suspend fun deleteNote(note: Note) {
-       noteDao.deleteNote(note)
+        noteDao.deleteNote(note)
     }
 
     override fun getNote(): LiveData<List<Note>> {
-        return noteDao.getAll()
+        return noteDao.getAllNotes()
     }
 
 

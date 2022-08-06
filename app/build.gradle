@@ -30,11 +30,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-}
-def room_version = '2.4.3'
-def coroutine_version = '1.6.1'
-dependencies {
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
 
+}
+
+dependencies {
+    def room_version = '2.4.2'
+    def coroutine_version = '1.6.1'
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -45,7 +52,7 @@ dependencies {
 
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
-    implementation "androidx.room:room-$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"

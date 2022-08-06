@@ -1,5 +1,6 @@
 package com.example.noteapp.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -39,6 +40,7 @@ class NoteRVAdapter(
         return noteList.size
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateList(newList: List<Note>){
         noteList.clear()
         noteList.addAll(newList)

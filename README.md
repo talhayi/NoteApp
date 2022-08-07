@@ -10,8 +10,8 @@
 |Room |2.4.2|
 
 ## Images in ArtBook
-![bosanasayfa](https://user-images.githubusercontent.com/56438103/183314308-b67527f3-2536-4ccf-88fe-2cf12b1cdcd1.PNG)
-![savedetayekran2](https://user-images.githubusercontent.com/56438103/183314321-1ad8877b-48e3-482e-adde-f1bb524e2335.PNG)
-![doluanasayfa](https://user-images.githubusercontent.com/56438103/183314328-95f68d13-4195-4fa9-b44d-51116a4543ee.jpeg)
-![update](https://user-images.githubusercontent.com/56438103/183314333-5e37c847-248a-4307-8fea-d8bd7ddff8a1.jpeg)
-![deleted](https://user-images.githubusercontent.com/56438103/183314340-96fd3e09-5327-4329-a178-2303d486d862.jpeg)
+<img src = "https://user-images.githubusercontent.com/56438103/183314308-b67527f3-2536-4ccf-88fe-2cf12b1cdcd1.PNG"  width="300" height="600"> <img src = "https://user-images.githubusercontent.com/56438103/183314321-1ad8877b-48e3-482e-adde-f1bb524e2335.PNG"  width="300" height="600"><br> <br> <br> <br> <br>
+<img src = "https://user-images.githubusercontent.com/56438103/183314328-95f68d13-4195-4fa9-b44d-51116a4543ee.jpeg"  width="300" height="600"> 
+<img src = "https://user-images.githubusercontent.com/56438103/183314333-5e37c847-248a-4307-8fea-d8bd7ddff8a1.jpeg"  width="300" height="600">
+<img src = "https://user-images.githubusercontent.com/56438103/183314340-96fd3e09-5327-4329-a178-2303d486d862.jpeg"  width="300" height="600">
+

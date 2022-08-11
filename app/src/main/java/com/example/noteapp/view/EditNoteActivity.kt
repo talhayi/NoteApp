@@ -5,21 +5,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-
+import androidx.core.text.set
 import androidx.lifecycle.ViewModelProvider
-
+import com.example.noteapp.R
 import com.example.noteapp.data.model.Note
 import com.example.noteapp.databinding.ActivityEditNoteBinding
-
+import com.example.noteapp.databinding.ActivityMainBinding
 import com.example.noteapp.viewmodel.NoteViewModel
-import dagger.hilt.android.AndroidEntryPoint
-
 import java.text.SimpleDateFormat
 import java.util.*
-import javax.inject.Inject
 
 
-@AndroidEntryPoint
 class EditNoteActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityEditNoteBinding

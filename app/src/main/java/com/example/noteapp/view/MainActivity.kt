@@ -12,16 +12,10 @@ import com.example.noteapp.adapter.NoteRVAdapter
 import com.example.noteapp.data.model.Note
 import com.example.noteapp.databinding.ActivityMainBinding
 import com.example.noteapp.viewmodel.NoteViewModel
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInterface {
-
-    lateinit var binding: ActivityMainBinding
-
+    private lateinit var binding: ActivityMainBinding
     private var noteList = ArrayList<Note>()
-
     lateinit var viewModel: NoteViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,11 +30,11 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInt
 
         binding.notesRV.adapter = noteRVAdapter
         viewModel = ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory.getInstance(application))[NoteViewModel::class.java]
-        viewModel.noteList.observe(this) { list ->
+        viewModel.noteList.observe(this,{list->
             list?.let {
                 noteRVAdapter.updateList(it)
             }
-        }
+        })
         binding.addNoteFAB.setOnClickListener {
             val intent = Intent(this@MainActivity,EditNoteActivity::class.java)
             startActivity(intent)

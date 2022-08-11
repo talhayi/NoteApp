@@ -6,9 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.noteapp.data.model.Note
 import com.example.noteapp.databinding.NoteRvItemBinding
-import javax.inject.Inject
 
-class NoteRVAdapter @Inject constructor(
+class NoteRVAdapter(
     private val noteList: ArrayList<Note>,
     private val noteClickInterface: NoteClickInterface,
     private val noteClickDeleteInterface: NoteClickDeleteInterface

@@ -3,8 +3,11 @@ package com.example.noteapp.data.source.repository
 import androidx.lifecycle.LiveData
 import com.example.noteapp.data.model.Note
 import com.example.noteapp.data.source.NoteDao
+import javax.inject.Inject
 
-class NoteRepository(private val noteDao: NoteDao):NoteRepositoryInterface {
+class NoteRepository @Inject constructor(
+    private val noteDao: NoteDao
+    ):NoteRepositoryInterface {
 
 
     override suspend fun insertNote(note: Note) {

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.noteapp.adapter.NoteClickDeleteInterface
@@ -12,11 +13,15 @@ import com.example.noteapp.adapter.NoteRVAdapter
 import com.example.noteapp.data.model.Note
 import com.example.noteapp.databinding.ActivityMainBinding
 import com.example.noteapp.viewmodel.NoteViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInterface {
     private lateinit var binding: ActivityMainBinding
     private var noteList = ArrayList<Note>()
-    lateinit var viewModel: NoteViewModel
+    //lateinit var viewModel: NoteViewModel
+
+    private val viewModel: NoteViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,12 +34,12 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteClickDeleteInt
         val noteRVAdapter = NoteRVAdapter(noteList,this,this)
 
         binding.notesRV.adapter = noteRVAdapter
-        viewModel = ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory.getInstance(application))[NoteViewModel::class.java]
-        viewModel.noteList.observe(this,{list->
+        //viewModel = ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory.getInstance(application))[NoteViewModel::class.java]
+        viewModel.noteList.observe(this) { list ->
             list?.let {
                 noteRVAdapter.updateList(it)
             }
-        })
+        }
         binding.addNoteFAB.setOnClickListener {
             val intent = Intent(this@MainActivity,EditNoteActivity::class.java)
             startActivity(intent)

@@ -8,6 +8,7 @@
 |Lifecycle |2.5.0|
 |Coroutines |1.6.1|
 |Room |2.4.2|
+|Hilt |2.38.1|
 
 ## Images in ArtBook
 <img src = "https://user-images.githubusercontent.com/56438103/183314308-b67527f3-2536-4ccf-88fe-2cf12b1cdcd1.PNG"  width="300" height="600"> <img src = "https://user-images.githubusercontent.com/56438103/183314321-1ad8877b-48e3-482e-adde-f1bb524e2335.PNG"  width="300" height="600"><br> <br> <br> <br> <br>

@@ -1,4 +1,4 @@
-- #### This project is written with Kotlin. MVVM architecture is used.
+- #### MVVM architecture is used.
 - #### This app was created by me to save our notes. We come across a button when we first launch the application. We are directed to the screen where we will save our notes after clicking the button. Here we write the title and details of the note and save it. The saved note is listed on the homepage. We can update and delete it from here.
 
 ## Important Libraries in Project
